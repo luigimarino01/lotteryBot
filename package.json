@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "cron": "^1.8.2",
     "discord.js": "^13.6.0",
     "node.js": "^0.0.1-security"
   },
@@ -10,7 +9,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luigimarino01/lotteryBot.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luigimarino01/lotteryBot/issues"
+  },
+  "homepage": "https://github.com/luigimarino01/lotteryBot#readme",
   "description": ""
 }

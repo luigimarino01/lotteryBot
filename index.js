@@ -1,5 +1,4 @@
 
-const fs = require('node:fs');
 const {
 	Client,
 	Collection,
@@ -14,18 +13,6 @@ const client = new Client({
 });
 let date_ob = new Date();
 
-
-const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
-
-
-for (const file of eventFiles) {
-	const event = require(`./events/${file}`);
-	if (event.once) {
-		client.once(event.name, (...args) => event.execute(...args));
-	} else {
-		client.on(event.name, (...args) => event.execute(...args));
-	}
-}
 
 
 
@@ -77,7 +64,7 @@ let canale = client.channels.cache.find(channel => channel.name.toLowerCase() ==
 		canale.send(`${numerigenerati[0]} - ${numerigenerati[1]} - ${numerigenerati[2]}`)
 		numerigenerati = [];
 		
-	}, 5000);
+	}, 86400000);
 	
 	 
 });
