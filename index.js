@@ -76,6 +76,32 @@ let canale = client.channels.cache.find(channel => channel.name.toLowerCase() ==
 		}
 		canale.send(`${numerigenerati[0]} - ${numerigenerati[1]} - ${numerigenerati[2]}`)
 		numerigenerati = [];
+
+		for(let i = 0; i < 3 ; i++) {
+			let randomNumber = Math.floor(Math.random() * (78 - 1 + 1)) + 1
+			
+			while (numerigenerati.includes(randomNumber)) {
+				randomNumber = Math.floor( Math.random() * (78 - 1 + 1)) + 1
+			}
+	
+			numerigenerati.push(randomNumber); 
+		}
+		canale.send(`${numerigenerati[0]} - ${numerigenerati[1]} - ${numerigenerati[2]}`)
+		numerigenerati = [];
+
+
+		for(let i = 0; i < 3 ; i++) {
+			let randomNumber = Math.floor(Math.random() * (78 - 1 + 1)) + 1
+			
+			while (numerigenerati.includes(randomNumber)) {
+				randomNumber = Math.floor( Math.random() * (78 - 1 + 1)) + 1
+			}
+	
+			numerigenerati.push(randomNumber); 
+		}
+		canale.send(`${numerigenerati[0]} - ${numerigenerati[1]} - ${numerigenerati[2]}`)
+		numerigenerati = [];
+
 		
 	}, 5000);
 	
